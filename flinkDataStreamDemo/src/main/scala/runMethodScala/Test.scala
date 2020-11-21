@@ -1,6 +1,6 @@
 //package runMethodScala
 //
-//class Test {
+//class JoinTest {
 //  val env = StreamExecutionEnvironment.getExecutionEnvironment
 //
 //  //便于测试，并行度设置为1

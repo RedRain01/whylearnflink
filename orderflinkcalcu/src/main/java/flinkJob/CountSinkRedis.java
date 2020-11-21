@@ -64,9 +64,9 @@ public class CountSinkRedis {
                 return tuple3;
             }
         });
-
+        //keyby商品id
         SingleOutputStreamOperator<CountOrderAgg> aggregate = dataStreamTuple3.keyBy(0)
-                .timeWindow(Time.seconds(1*60))
+                .timeWindow(Time.seconds(1*60*5))
                 .trigger(new Trigger<Tuple3<String, Double, String>, TimeWindow>() {
                     @Override
                     public TriggerResult onElement(Tuple3<String, Double, String> element, long timestamp, TimeWindow window, TriggerContext ctx) throws Exception {
@@ -125,7 +125,7 @@ public class CountSinkRedis {
         RedisSink<CountOrderAgg> redisSink = new RedisSink<>(conf, new MyRedisMapper());
         aggregate.addSink(redisSink);
         aggregate.print().setParallelism(1);
-        env.execute("testoreder");
+        env.execute("countPort");
     }
 
     public static class MyRedisMapper implements RedisMapper<CountOrderAgg> {

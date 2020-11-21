@@ -26,7 +26,18 @@
     </properties>
 
 
+
     <dependencies>
+
+
+        <!--测试  StringUtils.join 方法-->
+        <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.4</version>
+        </dependency>
+        <!--测试  StringUtils.join 方法end -->
 
         <!-- https://mvnrepository.com/artifact/org.apache.flink/flink-streaming-java -->
         <dependency>

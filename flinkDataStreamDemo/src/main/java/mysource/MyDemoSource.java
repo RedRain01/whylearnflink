@@ -26,11 +26,14 @@ private boolean isRunning=true;
             student.setClazz(Util.getClazz());
             student.setSubject(Util.getSubjec());
             student.setScore(2);
+            student.setTuition(2);
+            student.setTime(Util.getTime());
+            System.out.println("----------------------------"+JSON.toJSONString(student));
             sourceContext.collect(student);
             if (num == 200) {
                 isRunning = false;
             }
-            Thread.sleep(200);
+            Thread.sleep(1000);
         }
     }
 

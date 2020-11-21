@@ -1,6 +1,7 @@
 package utils;
 
 import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 
 import java.text.SimpleDateFormat;
@@ -20,11 +21,15 @@ public class Tes {
        // System.out.println(dateToStamp("2019-03-26 16:25:24"));
 //         String s="\"1256\",\"c3\",\"1\",\"z2\",\"00\",\"123.0\",\"15580275047\",\"2020-10-26 15:20:33.0\",\"2\",\"8784\"";
 //        String[] split = s.split("\",\"");
+        JSONArray jsonArray=new JSONArray();
         JSONObject jsonObject=new JSONObject();
         JSONObject jsonObject1=new JSONObject();
-        HashMap<String,String> map=new HashMap<>();
-        jsonObject.put("ss","sss");
-        jsonObject1.put("s22s","sss22");
+        jsonObject.put("123132","1234456");
+        jsonObject.put("78979","687654");
+        jsonObject1.put("98465","26456");
+        jsonArray.add(jsonObject);
+        jsonArray.add(jsonObject1);
+        System.out.println("========================="+JSON.toJSONString(jsonArray));
 
 
 //        for (int i = 0; i <100 ; i++) {

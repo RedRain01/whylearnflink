@@ -18,4 +18,5 @@ public class Student {
     private int score;
     private String clazz;
     private double tuition;
+    private long time;
 }
