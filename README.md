@@ -1,2 +1,2 @@
 # whylearnflink
-记录flink学习
+记录flink学习，主要是DataStream的Api练习，window，watermark，map等常见算子，后续会一直更新在学习工程中用到的关于FlinkDataStream的用法
